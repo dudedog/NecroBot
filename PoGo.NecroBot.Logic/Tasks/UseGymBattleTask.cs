@@ -290,7 +290,7 @@ namespace PoGo.NecroBot.Logic.Tasks
             if (isFailedToStart && _startBattleCounter > 0)
             {
                 Logger.Write("Waiting extra time to try again (3 min)");
-                await Task.Delay(180000).ConfigureAwait(false);
+                await Task.Delay(60000).ConfigureAwait(false);
                 await Execute(session, cancellationToken, gym, fortInfo).ConfigureAwait(false);
             }
 
